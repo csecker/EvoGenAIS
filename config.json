@@ -1,0 +1,80 @@
+{
+  "iteration": 1,
+  "main_config": {
+    "collection_temp_dir": "./tmp",
+    "output_root": "./output-files",
+    "output_tmp":  "./output-tmp",
+    "ranking_file": "./output-files/ranking_latest.csv.gz",
+    "top_percent": 20,
+    "seed_smiles_column": "attr_smi_orig",
+    "vfvs_output_glob": "../VFVS*/output-files",
+    "mcf_file": "./data/mcf.csv",
+    "wehi_pains_file": "./data/wehi_pains.csv",
+    "pains_file": "./data/pains.txt",
+    "generative_model": "reinvent-randomized",
+    "learning_scheme": "reinforce",
+    "sample_size": "1000",
+    "sample_interval_size": "500",
+    "sample_size_hard_limit": "true",
+    "sample_timelimit": "3600",
+    "allow_duplicates": "false",
+    "screen_first_only": "false",
+    "ligand_names_starting": "1",
+    "validation_set_ratio": "0.10",
+    "stoned_fp_type": "ECFP4",
+    "stoned_num_mutations": "5",
+    "stoned_fp_similarity_min": "0.0",
+    "stoned_fp_similarity_max": "1.0",
+    "model_folder_path": "./models",
+    "model_input": "model.pt",
+    "reinvent_folder_path": "./path/to/reinvent-randomized",
+    "reinvent_environment": ["virtualenv", "./path/to/reinventrandomized_env_3.9"],
+    "reinvent_randomize_multiplier": "10",
+    "reinvent_number_of_epochs": "10",
+    "reinvent_learning_mode": "ada",
+    "filter_general": "true",
+    "filter_rdkit_catalog": "true",
+    "filter_rdkit_catalog_sets": ["PAINS_A", "PAINS_B", "PAINS_C", "BRENK"],
+    "filter_mw": "true",
+    "filter_mw_min": "0",
+    "filter_mw_max": "500",
+    "filter_logp_rdkit": "true",
+    "filter_logp_min": "-2",
+    "filter_logp_max": "4",
+    "gpusim_filter": "true",
+    "gpusim_filter_fragments": "true",
+    "gpusim_db_filepath": "./path/to/databases-folder/",
+    "gpusim_port": "5000",
+    "gpusim_cutoff": "1.0",
+    "gpusim_return_count": "1",
+    "vfvs_summary_output_format": "csv",
+    "docking_scenarios": [
+      "8ef5_pH74_qvina02",
+      "8ef5_pH6_qvina02"
+    ],
+    "vflp_folder_paths": "",
+    "ranking_attributes": [
+      "score_weighted"
+    ],
+    "ranking_attributes_ascending": [
+      false
+    ],
+    "score_weighted": "false",
+    "score_weighted_attributes": [
+      "score_min_8ef5_pH74_qvina02",
+      "score_min_8ef5_pH6_qvina02"
+    ],
+    "score_weights": [
+      "-1",
+      "1"
+    ],
+    "score_weighted_step_size": [
+      "none",
+      "none"
+    ],
+    "score_weighted_cutoffs": [
+      "",
+      ""
+    ]
+  }
+}

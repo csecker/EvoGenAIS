@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evogenais"
+version = "0.1.0"
+description = "Iterative molecule generation and docking-result ranking CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "numexpr",
+  "requests",
+  "scikit-learn",
+  "selfies",
+  "rdkit",
+]
+
+[project.scripts]
+evogenais = "evogenais.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["evogenais*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

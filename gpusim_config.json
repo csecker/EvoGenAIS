@@ -1,0 +1,7 @@
+{
+  "gpusim_folder_path": "/home/htc/csecker/SCRATCH/VirtualFlow/packages/gpusimilarity",
+  "gpusim_db_filepath": "/home/htc/csecker/SCRATCH/VirtualFlow/databases/Enamine_Building_Blocks_1219968cmpd_20230630_stripped.fsim",
+  "gpusim_port": "5000",
+  "gpusim_virtualenv": "/home/htc/csecker/SCRATCH/gpusimilarity_env",
+  "gpusim_run_server": "true"
+}

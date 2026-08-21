@@ -1,0 +1,88 @@
+{
+  "main_config": {
+    "output_root": "./output-files",
+    "ranking_file": "./output-files/ranking_latest.csv.gz",
+    "top_percent": 10,
+    "seed_smiles_column": "attr_smi_orig",
+    "vfvs_output_glob": "../VFVS*/output-files",
+    "mcf_file": "./data/mcf.csv",
+    "wehi_pains_file": "./data/wehi_pains.csv",
+    "pains_file": "./data/pains.txt",
+    "generative_model": "stoned",
+    "learning_scheme": "retraining",
+    "sample_size": "10000",
+    "sample_interval_size": "100",
+    "sample_size_hard_limit": "true",
+    "sample_timelimit": "3600",
+    "allow_duplicates": "false",
+    "screen_first_only": "false",
+    "tranches_iterations": [
+      "iteration_001",
+      "iteration_002",
+      "iteration_003",
+      "iteration_004",
+      "iteration_005"
+    ],
+    "ligand_names_starting": "1",
+    "validation_set_ratio": "0.10",
+    "stoned_fp_type": "ECFP4",
+    "stoned_num_mutations": "2",
+    "stoned_fp_similarity_min": "0.20",
+    "stoned_fp_similarity_max": "0.80",
+    "model_folder_path": "../models",
+    "model_input": "model.pt",
+    "reinvent_folder_path": "../tools/reinvent-randomized",
+    "reinvent_environment": [
+      "conda",
+      "reinvent-randomized"
+    ],
+    "reinvent_randomize_multiplier": "10",
+    "reinvent_number_of_epochs": "10",
+    "reinvent_learning_mode": "transfer_learning",
+    "filter_general": "true",
+    "filter_rdkit_catalog": "false",
+    "filter_rdkit_catalog_sets": [],
+    "filter_mw": "true",
+    "filter_mw_min": "150",
+    "filter_mw_max": "650",
+    "filter_logp_rdkit": "false",
+    "filter_logp_min": "-2",
+    "filter_logp_max": "7",
+    "gpusim_filter": "false",
+    "gpusim_filter_fragments": "false",
+    "gpusim_screen": "false",
+    "gpusim_db_filepath": "../data/gpusim/reference.smi",
+    "gpusim_port": "8000",
+    "gpusim_cutoff": "0.70",
+    "gpusim_return_count": "100",
+    "vfvs_summary_output_format": "csv",
+    "docking_scenarios": [
+      "scenario_1"
+    ],
+    "vflp_folder_paths": "../VFLP*/status/*/*/*.json.gz",
+    "ranking_attributes": [
+      "score_min_scenario_1"
+    ],
+    "ranking_attributes_ascending": [
+      true
+    ],
+    "score_weighted": "false",
+    "score_weighted_attributes": [
+      "score_min_scenario_1"
+    ],
+    "score_weights": [
+      "1"
+    ],
+    "score_weighted_step_size": [
+      "none"
+    ],
+    "score_weighted_cutoffs": [
+      ""
+    ],
+    "filter_vflp_attributes": "false",
+    "vflp_attribute_filters": [],
+    "vflp_attribute_filters_min": [],
+    "vflp_attribute_filters_max": [],
+    "loss_average": "100"
+  }
+}
